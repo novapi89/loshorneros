@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --color-theme-1: #ffae1b;
+    --color-theme-2: #21b3c9;
+    --color-theme-3: #e64a43;
+    --color-theme-4: #6d3393;
+    --color-titulo-resaltado: #e64a43;
+    --color-fondo-seccion: #f8f8f8;
+    --color-texto-principal: #6c757d;
+    --font-titulo: 'Georgia', serif;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background-color: var(--color-fondo-seccion);
+}
+
+.tm-sc-section-title.section-title {
+    margin-bottom: 40px;
+}
+
+.tm-sc-section-title .title {
+    font-size: 3em;
+    font-weight: 700;
+    color: #333;
+    font-family: var(--font-titulo);
+}
+
+.tm-sc-section-title .title-wrapper {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.tm-sc-section-title .title .text-theme-colored3 {
+    color: var(--color-titulo-resaltado) !important;
+}
+
+.tm-sc-section-title p {
+    color: var(--color-texto-principal);
+    font-size: 1.05em;
+    margin-top: 10px;
+}
+
+.tm-sc-icon-box {
+    color: white;
+    border-radius: 15px !important;
+    padding: 30px !important;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.tm-sc-icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bg-theme-colored1 {
+    background-color: var(--color-theme-1) !important;
+}
+.bg-theme-colored2 {
+    background-color: var(--color-theme-2) !important;
+}
+.bg-theme-colored3 {
+    background-color: var(--color-theme-3) !important;
+}
+.bg-theme-colored4 {
+    background-color: var(--color-theme-4) !important;
+}
+
+.icon-box-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon-wrapper {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.icon-wrapper .icon {
+    font-size: 3em;
+    display: block;
+    color: white;
+}
+
+.icon-text {
+    flex-grow: 1;
+}
+
+.icon-box-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: white !important;
+}
+
+.icon-text p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: white !important;
+}
+
+/* --- RESPONSIVO: Adaptación para Tablets y Dispositivos Medianos (Max 768px) --- */
+@media screen and (max-width: 768px) {
+    .container {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .tm-sc-section-title.section-title {
+        margin-bottom: 30px;
+    }
+
+    .tm-sc-section-title .title {
+        font-size: 2.5em;
+    }
+
+    .tm-sc-section-title p {
+        font-size: 1em;
+    }
+
+    .tm-sc-icon-box {
+        padding: 25px !important;
+        margin-bottom: 20px;
+    }
+
+    .icon-wrapper .icon {
+        font-size: 2.5em;
+    }
+
+    .icon-box-title {
+        font-size: 1.3em;
+    }
+}
+
+/* --- RESPONSIVO: Adaptación para Móviles Pequeños (Max 320px) --- */
+@media screen and (max-width: 320px) {
+    .container {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .tm-sc-section-title .title {
+        font-size: 2em;
+        word-break: break-word;
+    }
+
+    .tm-sc-icon-box {
+        padding: 20px !important;
+        border-radius: 10px !important;
+        text-align: center !important; /* Asegura centrado en móvil extremo */
+    }
+
+    .icon-box-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon-wrapper {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .icon-wrapper .icon {
+        font-size: 2em;
+    }
+
+    .icon-box-title {
+        font-size: 1.2em;
+    }
+
+    .icon-text p {
+        font-size: 0.9em;
+    }
+}
+.hidden {
+    display: none !important;
+}
+/* --- Nota: La media query inicial de 767px fue integrada o eliminada, 
+   y sus estilos se manejaron en las de 768px y 320px para simplificar. --- */

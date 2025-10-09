@@ -1,0 +1,12 @@
+# Activar RewriteEngine
+RewriteEngine On
+
+# Establecer el directorio raíz como base
+RewriteBase /loshorneros/public/
+
+# Si el archivo o directorio existe físicamente, no reescribir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todas las demás peticiones a index.php
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
